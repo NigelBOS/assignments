@@ -1,25 +1,25 @@
 section .text
-        global _start
+    global _start
 
 _start:
-        ;put code here:
-        mov eax, [var1] ;put var1 in eax
-      	neg eax ;make it negative
+    ;put code here:
+    mov eax, [var1] ;put var1 in eax
+    neg eax ;make it negative
 	imul eax, [var2] ;signed int multiply
 	add eax, [var3] ;add on var 3
-        mov [result], eax ;store in result var
+    mov [result], eax ;store in result var
 
-        ;exit stuff
-        mov eax, 1
-        mov ebx, 0
-        int 0x80
+    ;exit stuff
+    mov eax, 1
+    mov ebx, 0
+    int 0x80
 
 section .data
-        var1 dd 4
-        var2 dd 5
-        var3 dd 6
-        var4 dd 7
+    var1 dd 4
+    var2 dd 5
+    var3 dd 6
+    var4 dd 7
 
 section .bss
-        ;the uninitialized variable result
-        result resd 1
+    ;the uninitialized variable result
+    result resd 1
