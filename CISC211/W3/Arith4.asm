@@ -3,7 +3,7 @@ section .text
 
 _start:
     ;put code here:
-      mov ebx, [var2] ;denominator
+    mov ebx, [var2] ;denominator
 	sub ebx, 3
 
 	mov eax, [var1] ; numerator
