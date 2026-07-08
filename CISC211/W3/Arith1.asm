@@ -1,8 +1,8 @@
 section .text
-        global _start
+    global _start
 
 _start:
-        ;put code here:
+    ;put code here:
 	mov eax, [var1]
 	neg eax
 	imul eax, 10 ;imul for signed data, eax=eax*10
@@ -14,10 +14,10 @@ _start:
 	int 0x80
 
 section .data 
-        var1 dd 4 
-        var2 dd 5
-        var3 dd 6
-        var4 dd 7
+    var1 dd 4 
+    var2 dd 5
+    var3 dd 6
+    var4 dd 7
 
 section .bss
 	;the uninitialized variable result
