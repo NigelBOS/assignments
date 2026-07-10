@@ -74,5 +74,62 @@ section .bss
 
 ## Question 3
 ```asm
+section .text
+	global _start
 
+_start:
+;code here
+        ;Xor
+	mov eax, [zeroVar]
+	xor eax, eax
+	mov [result1], eax
+
+        ;odd/even test
+	mov eax, [testVar]
+	mov ebx, 2
+	cdq         ;sign extend
+	idiv ebx        ;divide
+	
+	cmp edx, 0 ;compares remainder to 0
+	jz .even        ; checks if even, if so it jumps to even section skipp ing the following between
+
+        ;display odd number msg
+	mov eax, 4        ;sys_write        
+	mov ebx, 1        ;stdout
+	mov ecx, msg_odd
+	mov edx, len_odd
+	int 0x80
+
+	mov dword [result2], 1         ;set to 1 for odd
+	jmp .exit
+
+.even:
+        ;if even sotres 0
+        ;display even number msg
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, msg_even
+	mov edx, len_even
+	int 0x80
+
+	mov dword [result2], 0
+	
+.exit:
+	mov eax, 1
+	mov ebx, 0 
+	int 0x80
+
+segment .bss
+	result1 resd 1        ;for xor
+	result2 resd 1        ;for odd/even
+
+section .data
+	testVar dd 5
+	zeroVar dd 20
+
+	msg_odd  db 'odd number', 0xA
+	len_odd  equ $ - msg_odd
+
+	msg_even db 'even number', 0xA
+	len_even equ $ - msg_even
 ```
