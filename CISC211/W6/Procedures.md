@@ -10,7 +10,7 @@ An unexpected challenge this time was using lucidchart for the flowchart, appare
 
 
 ## Assebly Files:
-### procedures.asm
+### procedures.asm:
 [procedures.asm](./procedures.asm)
 ```asm
 section .text
