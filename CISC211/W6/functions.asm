@@ -24,14 +24,14 @@ check_even_odd:
 print_even:
         mov edx, even_len
         mov ecx, even_msg
-        jmp do_write
+        jmp write
 
 print_odd:
         mov edx, odd_len
         mov ecx, odd_msg
 
 ; prints it out all the way
-do_write:
+write:
         mov ebx, 1
         mov eax, 4
         int 0x80
