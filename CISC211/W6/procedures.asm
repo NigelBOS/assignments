@@ -29,7 +29,7 @@ printChar:
 ; exit is now a procedure that we can call
 exit:
         mov eax, 1
-	      mov ebx, 0
+	    mov ebx, 0
         int 0x80
         ret
 
