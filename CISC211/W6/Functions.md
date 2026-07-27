@@ -69,4 +69,4 @@ section .data
 ```
 
 ### Sources:
-FLowchart creation: https://lucid.co/lucidchart
+Flowchart creation: https://lucid.co/lucidchart
