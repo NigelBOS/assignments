@@ -8,7 +8,7 @@ Nigel Boswell
 ## Challenges encountered:
 One challenge similar to before but a bit more challenging here, was getting the eax register to both be a register in use and getting used for printing, thus overriding the values. additionally could not pop the stack back on, post function call, as opposed to when we had the procedure call. had to also get the [ebp + 8] to mkae sure its seperating the arguements from the call register alterations. I remember doing the odd/even testing before so I just did that again here but now with the function calls and jumping around even more.
 
-## Assebly Files:
+## Assembly Files:
 ### functions.asm:
 [functions.asm](./functions.asm)
 ```asm
