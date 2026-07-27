@@ -2,7 +2,7 @@
 Nigel Boswell
 
 ## Flowchart:
-![](./p)
+![functions_Flowchart.png](./functions_Flowchart.png)
 
 
 ## Challenges encountered:
@@ -21,7 +21,7 @@ _start:
         
         push eax	; put on the stack
         call check_even_odd	; call function
-        add esp, 4	; removes from stack without assigning value
+        pop eax
 
         call exit	; lets get out of here
 
