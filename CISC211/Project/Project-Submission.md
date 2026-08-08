@@ -5,6 +5,7 @@ Nigel Boswell
 ![General thought process](./project_flowchart.pdf)
 
 ## Explanation Video:
+[unlisted yt video](https://youtu.be/v5rPASKVRsc) 
 
 
 ## Assebly Files:
